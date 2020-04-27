@@ -41,6 +41,7 @@ h1 {
   text-align: center;
   font-size: 100px;
   padding: 2rem;
+  width: 100vw;
 }
 
 a {
@@ -49,8 +50,10 @@ a {
 }
 
 #mainBox {
+  justify-content: center;
   display: flex;
   padding: 2rem;
+  width: 100vw;
 }
 
 .number {

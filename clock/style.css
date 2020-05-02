@@ -59,7 +59,8 @@ a {
 .number {
   display: flex;
   flex-wrap: wrap;
-  width: 160px;
+  width: calc((100vw * 0.03) * 4);
+  max-width: 160px;
   height: auto;
 }
 
@@ -70,8 +71,10 @@ a {
 }
 
 .block {
-  width: 35px;
-  height: 35px;
+  max-width: 35px;
+  max-height: 35px;
+  width: calc(100vw * 0.025);
+  height: calc(100vw * 0.025);
   background: var(--text);
   margin: 0.2rem;
   border: 2px solid transparent;
@@ -106,4 +109,18 @@ footer {
   align-items: center;
   background: var(--color4);
   border-radius: 25px 25px 0 0;
+}
+
+@media screen and (max-width: 500px) {
+  #mainBox {
+    padding: 0.5rem;
+  }
+
+  .number {
+    width: calc((100vw * 0.03) * 5);
+  }
+
+  .dots {
+    margin-right: 0.5rem;
+  }
 }

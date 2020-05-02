@@ -71,7 +71,7 @@ function displayHour(h, m, s) {
   const times = [h, m, s];
   let value = "";
 
-  times.forEach((t, index) => {
+  times.forEach((time, index) => {
     if (index === 0) {
       value = "hours";
     } else if (index === 1) {
@@ -80,14 +80,14 @@ function displayHour(h, m, s) {
       value = "seconds";
     }
 
-    t.forEach((e, i) => {
-      const number = [...document.getElementById(`${value}${i}`).children];
+    time.forEach((element, idx) => {
+      const number = [...document.getElementById(`${value}${idx}`).children];
 
-      number.forEach((b) => {
-        if (!numberBlocks[e].includes(parseInt(b.id))) {
-          b.classList.add("hide");
+      number.forEach((block) => {
+        if (!numberBlocks[element].includes(parseInt(block.id))) {
+          block.classList.add("hide");
         } else {
-          b.classList.remove("hide");
+          block.classList.remove("hide");
         }
       });
     });
